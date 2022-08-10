@@ -3,10 +3,20 @@ function gerarCarta() {
   let conteudoCarta = document.getElementById('carta-texto').value;
   let tagFilho = document.getElementById('carta-gerada');
   let arrayConteudo = conteudoCarta.split(' ');
-  for (let index = 0; index < arrayConteudo.length; index += 1) {
-    let criandoCarta = tagFilho.appendChild(document.createElement('span'));
-    criandoCarta.innerText = arrayConteudo[index];
-  }
+  console.log(arrayConteudo);
+  if (conteudoCarta === '') {
+    let mensagemErro = document.getElementById('carta-gerada');
+    mensagemErro.innerText = 'Por favor, digite o conteúdo da carta.';
+  } else if (arrayConteudo[0] === '') {
+    for (let i = 0; i < arrayConteudo.length; i += 1) {
+      let mensagemErro = document.getElementById('carta-gerada');
+      mensagemErro.innerText = 'Por favor, digite o conteúdo da carta.';
+    }
+  } else {
+    for (let index = 0; index < arrayConteudo.length; index += 1) {
+      let criandoCarta = tagFilho.appendChild(document.createElement('span'));
+      criandoCarta.innerText = arrayConteudo[index];
+    } }
 }
 
 function removeSelecionado() {
