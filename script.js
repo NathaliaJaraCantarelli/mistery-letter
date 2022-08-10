@@ -22,6 +22,7 @@ function gerarCarta() {
       let classes2 = " " + definaClasse2('rotateleft', 'rotateright') + " " + definaClasse2('skewleft', 'skewright');
       criandoCarta.className = classes3 + classes2;
     } }
+    contagem(arrayConteudo);
 }
 
 function definaClasse3 (classe1, classe2, classe3) {
@@ -66,3 +67,7 @@ spans.addEventListener('click', function(event) {
     classeClicada.className = classes3 + classes2;
 })
 
+function contagem (array) {
+    let contador = document.getElementById('carta-contador');
+    contador.innerText = array.length;
+}
