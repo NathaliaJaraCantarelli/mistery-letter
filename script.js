@@ -57,3 +57,12 @@ function classesSorteio3() {
     let a = Math.floor(Math.random() * 2); 
     return a;
   }
+
+let spans = document.getElementById('carta-gerada');
+spans.addEventListener('click', function(event) {
+    let classeClicada = event.target;
+    let classes3 = definaClasse3('newspaper', 'magazine1', 'magazine2') + " " + definaClasse3('medium', 'big', 'reallybig');
+    let classes2 = " " + definaClasse2('rotateleft', 'rotateright') + " " + definaClasse2('skewleft', 'skewright');
+    classeClicada.className = classes3 + classes2;
+})
+
