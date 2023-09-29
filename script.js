@@ -1,5 +1,5 @@
 function removeSelecionado() {
-  let removeItem = document.querySelectorAll('span');
+  const removeItem = document.querySelectorAll('span');
   for (let i = removeItem.length-1; i >= 0 ; i -= 1) {
     removeItem[i].remove();
   }
@@ -39,7 +39,7 @@ function definaClasse3 (classe1, classe2, classe3) {
 }
 
 function definaClasse2 (classe1, classe2) {
-    let numero = classesSorteio3();
+    let numero = classesSorteio2();
     let classe;
     if (numero === 0) {
       classe = classe1;
@@ -54,7 +54,7 @@ function classesSorteio3() {
   return a;
 }
 
-function classesSorteio3() {
+function classesSorteio2() {
     let a = Math.floor(Math.random() * 2); 
     return a;
   }
